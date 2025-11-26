@@ -1,0 +1,104 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: slideDown 0.3s ease;
+}
+
+/* Slide animation */
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Heading */
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #E50000;
+}
+
+/* Inputs */
+.omn-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.omn-input:focus {
+  border-color: #E50000;
+  box-shadow: 0 0 5px rgba(229,0,0,0.5);
+}
+
+/* Login Button */
+.omn-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #E50000;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.omn-btn:hover {
+  background-color: #c00000;
+}
+
+/* Sign Up text */
+.signup-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signup-text a {
+  color: #E50000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Blur effect for body when modal open */
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
