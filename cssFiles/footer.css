@@ -1,101 +1,130 @@
- .main-footer {
-        background-color: #333;
-        color: #ddd;
-        padding-top: 40px;
-        font-family: 'Noto Sans Bengali', sans-serif;
-        border-top: 4px solid #E50000;
-    }
+.main-footer {
+  background-color: #ffffff;
+  color: #333;
+  padding-top: 40px;
+  font-family: "Inter", sans-serif;
+  border-top: 5px solid #000;
+  margin-top: 40px;
+}
 
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px 30px 15px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-    }
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px 30px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #eee;
+}
 
-    .footer-section {
-        flex: 1;
-        min-width: 250px;
-    }
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  border-right: 1px solid #eee;
+  padding-right: 20px;
+  padding-left: 5px;
+}
+.footer-section:last-child {
+  border-right: none;
+}
 
-    .footer-section h3 {
-        color: #fff;
-        font-size: 20px;
-        margin-bottom: 20px;
-        font-weight: 700;
-        border-bottom: 2px solid #E50000;
-        padding-bottom: 5px;
-        display: inline-block;
-    }
+.footer-section.about h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: #000;
+  margin-bottom: 20px;
+}
 
-    .footer-section h3 span {
-        color: #E50000;
-        font-weight: 700;
-    }
+.footer-section h3 {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+  display: block;
+}
 
-    .footer-section p {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
+.footer-section h3 span {
+  color: #000;
+  font-weight: 900;
+}
 
-    .footer-section.links ul {
-        list-style: none;
-    }
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
 
-    .footer-section.links a,
-    .footer-section.contact p {
-        color: #ccc;
-        text-decoration: none;
-        display: block;
-        padding: 5px 0;
-        font-size: 15px;
-        transition: color 0.3s;
-    }
+.footer-section.links ul {
+  list-style: none;
+}
 
-    .footer-section.links a:hover {
-        color: #E50000;
-        padding-left: 8px;
-    }
+.footer-section.links a,
+.footer-section.contact p {
+  color: #555;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  font-size: 15px;
+  transition: color 0.3s;
+}
 
-    .footer-section.contact i {
-        margin-right: 10px;
-        color: #E50000;
-    }
+.footer-section.links a:hover {
+  color: #000;
+  padding-left: 0;
+}
 
-    /* Social Links Styling */
-    .social-links a {
-        color: #fff;
-        font-size: 18px;
-        margin-right: 15px;
-        transition: color 0.3s;
-    }
+.footer-section.contact i {
+  margin-right: 10px;
+  color: #000;
+}
 
-    .social-links a:hover {
-        color: #E50000;
-    }
+.social-links a {
+  color: #333;
+  font-size: 18px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
 
-    /* Footer Bottom Bar */
-    .footer-bottom {
-        background-color: #222;
-        color: #aaa;
-        text-align: center;
-        padding: 15px 0;
-        font-size: 14px;
-        border-top: 1px solid #444;
-    }
+.social-links a:hover {
+  color: #000;
+}
 
-    /* Responsive adjustment */
-    @media (max-width: 600px) {
-        .footer-container {
-            flex-direction: column;
-            padding: 0 20px 30px 20px;
-        }
-        .footer-section {
-            min-width: 100%;
-            margin-bottom: 20px;
-        }
-    }
+/* Footer Bottom Bar */
+.footer-bottom {
+  background-color: #f0f0f0;
+  color: #666;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsive design*/
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    padding: 0 20px 30px 20px;
+    border-bottom: none;
+  }
+  .footer-section {
+    min-width: 100%;
+    margin-bottom: 20px;
+    border-right: none;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  .footer-section:last-child {
+    border-bottom: none;
+  }
+  .footer-section.about h3 {
+    font-size: 40px;
+  }
+}

@@ -5,28 +5,36 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 /* Modal content */
 .modal-content {
-  background: white;
+  background: #ffffff;
   padding: 30px 25px;
-  border-radius: 12px;
-  width: 350px;
+  border-radius: 0;
+  width: 90%;
+  max-width: 380px;
   text-align: center;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   animation: slideDown 0.3s ease;
+  font-family: "Inter", sans-serif;
 }
 
 /* Slide animation */
 @keyframes slideDown {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Close button */
@@ -34,16 +42,23 @@
   position: absolute;
   top: 12px;
   right: 15px;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #000;
   cursor: pointer;
+  transition: color 0.2s;
+}
+.close:hover {
+  color: #555;
 }
 
 /* Heading */
 .modal-content h2 {
-  margin-bottom: 20px;
-  color: #E50000;
+  margin-bottom: 25px;
+  color: #000;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 900;
+  font-size: 26px;
 }
 
 /* Inputs */
@@ -51,35 +66,35 @@
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  border-radius: 0;
+  border: 1px solid #000;
   font-size: 14px;
   outline: none;
 }
 
 .omn-input:focus {
-  border-color: #E50000;
-  box-shadow: 0 0 5px rgba(229,0,0,0.5);
+  border-color: #000;
+  box-shadow: 0 0 0 1px #000;
 }
 
-/* Login Button */
 .omn-btn {
   width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  background-color: #E50000;
+  padding: 14px;
+  border: 1px solid #000;
+  border-radius: 0;
+  background-color: #000;
   color: white;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .omn-btn:hover {
-  background-color: #c00000;
+  background-color: #444;
+  border-color: #444;
 }
 
-/* Sign Up text */
 .signup-text {
   margin-top: 15px;
   font-size: 14px;
@@ -87,7 +102,7 @@
 }
 
 .signup-text a {
-  color: #E50000;
+  color: #000;
   text-decoration: none;
   font-weight: 600;
 }
@@ -96,9 +111,14 @@
   text-decoration: underline;
 }
 
-/* Blur effect for body when modal open */
 .blur {
-  filter: blur(5px);
+  filter: blur(4px);
   pointer-events: none;
   user-select: none;
+}
+
+@media (max-width: 450px) {
+  .modal-content {
+    margin: 0 10px;
+  }
 }
