@@ -1,0 +1,406 @@
+ :root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #f7f7f7;
+    --text-dark: #1c1c1c;
+    --accent-primary: #000055;
+    /* Deep Navy Blue */
+    --accent-secondary: #a02319;
+    /* Classic Red */
+    --border-light: #e5e5e5;
+    --border-medium: #ccc;
+    --shadow-base: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary-bg);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-dark);
+  }
+
+  /* --- Utility Classes (Pure CSS equivalent) --- */
+  .shadow-base {
+    box-shadow: var(--shadow-base);
+  }
+
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  .border-base {
+    border: 1px solid var(--border-light);
+  }
+
+  .p-4 {
+    padding: 1rem;
+  }
+
+  .p-6 {
+    padding: 1.5rem;
+  }
+
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .space-y-6>* {
+    margin-top: 1.5rem;
+  }
+
+  .space-y-6>*:first-child {
+    margin-top: 0;
+  }
+
+  /* --- Sidebar & Layout --- */
+  .sidebar {
+    width: 256px;
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--primary-bg);
+    border-right: 1px solid var(--border-light);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    padding: 1.5rem;
+  }
+
+  .main-content {
+    margin-left: 0;
+    /* Default for mobile */
+    padding: 1rem;
+    padding-top: 5rem;
+    /* Space for mobile menu button */
+    min-height: 100vh;
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  .sidebar-header {
+    font-size: 1.875rem;
+    /* 3xl */
+    font-weight: 700;
+    /* bold */
+    color: var(--accent-secondary);
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  /* Navigation Links */
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    transition: background-color 0.2s;
+  }
+
+  .nav-link i {
+    width: 1.25rem;
+    margin-right: 0.75rem;
+  }
+
+  .nav-link:hover:not(.active) {
+    background-color: var(--secondary-bg);
+  }
+
+  .nav-link.active {
+    background-color: var(--secondary-bg);
+    color: var(--accent-primary);
+    font-weight: 600;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-light);
+  }
+
+  .logout-link {
+    color: #dc2626;
+    /* Red-600 */
+  }
+
+  .logout-link:hover {
+    background-color: var(--secondary-bg);
+  }
+
+  /* --- Header --- */
+  .header-bar {
+    background-color: var(--primary-bg);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-base);
+    border: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+  }
+
+  .user-avatar {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #e5e7eb;
+    /* Gray-200 */
+    color: var(--text-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border: 1px solid var(--border-medium);
+    margin-left: 0.75rem;
+  }
+
+  /* --- Sections (Forms and Tables) --- */
+  .content-section {
+    background-color: var(--primary-bg);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-light);
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-medium);
+    color: var(--accent-secondary);
+  }
+
+  /* --- Form Styles --- */
+  .form-label {
+    display: block;
+    font-size: 0.875rem;
+    /* sm */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-medium);
+    color: var(--text-dark);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 1px var(--accent-primary);
+  }
+
+  .form-textarea {
+    resize: vertical;
+  }
+
+  /* Image Upload Area */
+  .upload-area {
+    border: 2px dashed var(--border-medium);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--secondary-bg);
+    text-align: center;
+  }
+
+  .btn-upload {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-primary);
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btn-upload:hover {
+    background-color: var(--accent-secondary);
+  }
+
+  #image-preview-container {
+    margin-top: 1rem;
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #image-preview {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-medium);
+  }
+
+  .btn-publish {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #15803d;
+    /* Green-700 */
+    color: white;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-publish:hover {
+    background-color: #14532d;
+    /* Green-900 */
+  }
+
+  /* --- Table Styles --- */
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .data-table thead tr {
+    text-align: left;
+    color: #6b7280;
+    /* Gray-500 */
+    background-color: var(--secondary-bg);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .data-table th {
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .data-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text-dark);
+    font-size: 0.9375rem;
+  }
+
+  .data-table tbody tr:hover {
+    background-color: var(--secondary-bg);
+    transition: background-color 0.15s;
+  }
+
+  .badge {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    /* Full rounded */
+    display: inline-block;
+  }
+
+  .badge-published {
+    background-color: #dcfce7;
+    /* Green-100 */
+    color: #15803d;
+    /* Green-700 */
+  }
+
+  .badge-draft {
+    background-color: #fef9c3;
+    /* Yellow-100 */
+    color: #a16207;
+    /* Yellow-700 */
+  }
+
+  .btn-action {
+    margin-right: 0.5rem;
+    transition: color 0.2s;
+  }
+
+  .btn-edit {
+    color: #3b82f6;
+  }
+
+  .btn-edit:hover {
+    color: #2563eb;
+  }
+
+  .btn-delete {
+    color: #ef4444;
+  }
+
+  .btn-delete:hover {
+    color: #dc2626;
+  }
+
+  /* --- Mobile Specific Styles --- */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 30;
+    padding: 0.5rem;
+    background-color: var(--accent-secondary);
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+  }
+
+  .sidebar-mobile-hidden {
+    transform: translateX(-100%);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar-mobile-visible {
+    transform: translateX(0);
+  }
+
+  /* --- Desktop Styles (Media Query) --- */
+  @media (min-width: 768px) {
+    .menu-toggle {
+      display: none;
+    }
+
+    .main-content {
+      margin-left: 256px;
+      /* Match sidebar width */
+      padding-top: 2rem;
+      /* Remove mobile padding top */
+      padding: 2rem;
+    }
+
+    .sidebar {
+      transform: translateX(0);
+      /* Always visible on desktop */
+    }
+  }
