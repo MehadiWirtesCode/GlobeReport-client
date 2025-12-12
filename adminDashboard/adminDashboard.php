@@ -94,12 +94,11 @@
           <label for="post-category" class="form-label">Category</label>
           <select id="post-category" class="form-select" required>
             <option value="" disabled selected>Select a Category</option>
-            <option value="technology">Technology</option>
-            <option value="finance">Finance & Economy</option>
-            <option value="politics">Politics</option>
-            <option value="lifestyle">Lifestyle & Culture</option>
-            <option value="opinion">Opinion</option>
+            <option value="national">National</option>
+            <option value="international">International</option>
             <option value="sports">Sports</option>
+            <option value="business">Business</option>
+            <option value="politics">Politics</option>
           </select>
         </div>
 
