@@ -4,28 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GlobeReport</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap"
-    rel="stylesheet">
-
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
-
-  <link rel="stylesheet" href="cssFiles/navbar.css">
-  <link rel="stylesheet" href="cssFiles/footer.css">
-  <link rel="stylesheet" href="cssFiles/loginModal.css">
-  <link rel="stylesheet" href="cssFiles/toast.css">
-  <link rel="stylesheet" href="cssFiles/mainContent.css">
-  <script src="jsFiles/index.js" defer></script>
-  <script src="jsFiles/loginSignup.js" defer></script>
+  <title>International-GlobeReport</title>
+  <link rel="stylesheet" href="../cssFiles/footer.css">
+  <link rel="stylesheet" href="../cssFiles/mainContent.css">
+  <link rel="stylesheet" href="../cssFiles/navbar.css">
+  <script src="../jsFiles/international.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
-
   <nav class="navbar">
     <div class="container relative">
       <div class="hamburger" onclick="toggleMenu()">
@@ -90,7 +77,7 @@
           </li>
           <li class="main-menu-item"><a href="#home">Home</a></li>
           <li class="main-menu-item"><a href="pages/National.php">National</a></li>
-          <li class="main-menu-item"><a href="pages/international.php">International</a></li>
+          <li class="main-menu-item"><a href="#international">International</a></li>
           <li class="main-menu-item"><a href="#sports">Sports</a></li>
           <li class="main-menu-item"><a href="#business">Business</a></li>
           <li class="main-menu-item"><a href="#lifestyle">Lifestyle</a></li>
@@ -99,14 +86,12 @@
     </div>
   </nav>
 
-  <!-- Content section -->
-  <main class="card-container" id="card-container">
+  <!-- card container -->
+  <main class="card-container" id="international-card-container">
 
   </main>
-  <!-- END MAIN CONTENT SECTION -->
 
-
-  <!-- Footer Section -->
+  <!-- footer -->
   <footer class="main-footer">
     <div class="footer-container">
 
@@ -152,41 +137,6 @@
     </div>
   </footer>
 
-
-  <!-- Login Modal -->
-  <div id="loginModal" class="modal omn">
-    <div class="modal-content omn-content">
-      <span class="close" id="closeLoginModal">&times;</span>
-      <h2>Login</h2>
-      <input type="text" placeholder="Username" id="username" class="omn-input">
-      <input type="password" placeholder="Password" id="password" class="omn-input">
-      <button id="submitLogin" class="omn-btn">Login</button>
-
-      <div class="signup-text">
-        Don't have an account? <a href="#" id="signupLink">Sign Up</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Signup Modal -->
-  <div id="signupModal" class="modal omn">
-    <div class="modal-content omn-content">
-      <span class="close" id="closeSignupModal">&times;</span>
-      <h2>Sign Up</h2>
-      <input type="text" placeholder="Username" id="signupUsername" class="omn-input" required>
-      <input type="email" placeholder="Email" id="signupEmail" class="omn-input" required>
-      <input type="password" placeholder="Password" id="signupPassword" class="omn-input" required>
-      <input type="password" placeholder="Confirm Password" id="signupConfirmPassword" class="omn-input" required>
-      <button id="submitSignup" class="omn-btn">Sign Up</button>
-
-      <div class="signup-text">
-        Already have an account? <a href="#" id="loginLink">Login</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- toast -->
-  <div id="toast-container"></div>
 </body>
 
 </html>
