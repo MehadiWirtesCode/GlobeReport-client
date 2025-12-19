@@ -23,7 +23,11 @@ A simple PHP-based project integrated with **Supabase** for database management.
 
 📂PROJECT SETUP GUIDE
 -----------------------
-👉 Clone this repository 
+👉 Create a folder 
+-->>> clone thisb two repository
+repo link client ->
+repo link server ->
+
 ---->>> open project folder in code editor 
 
  👉 create account in supabase 
