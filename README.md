@@ -49,8 +49,13 @@ project_folder/
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repositories
-git clone https://github.com/MehadiWirtesCode/GlobeReport-client.git
-git clone https://github.com/MehadiWirtesCode/GlobeReport-server.git
+
+1️⃣ Clone the Repositories
+
+➜ Clone the client repository: `git clone https://github.com/MehadiWirtesCode/GlobeReport-client.git`  
+➜ Clone the server repository: `git clone https://github.com/MehadiWirtesCode/GlobeReport-server.git`
+
+
 
 
 2️⃣ Set Up Supabase
