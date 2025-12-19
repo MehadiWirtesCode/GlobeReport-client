@@ -23,12 +23,12 @@ A simple PHP-based project integrated with **Supabase** for database management.
 
 📂PROJECT SETUP GUIDE
 -----------------------
-👉 Create a folder 
--->>> clone thisb two repository
-repo link client ->
+👉 Create a folder like project_folder
+-->>> clone this two repository
+repo link client -> https://github.com/MehadiWirtesCode/GlobeReport-client
 repo link server ->
 
----->>> open project folder in code editor 
+---->>> open root folder (like project_folder) in code editor 
 
  👉 create account in supabase 
 ------>>> craete databases in supabase.
