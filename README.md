@@ -40,12 +40,9 @@ This project demonstrates how to connect a PHP backend with Supabase using envir
 Follow the steps below to run the project locally.
 --------------------------------------------------------
 ## 📁 Project Structure
-
-project_folder/
-├── GlobeReport-client/
-└── GlobeReport-server/
-
-
+- project_folder/
+  - GlobeReport-client/
+  - GlobeReport-server/
 
 ## 🚀 Getting Started
 
