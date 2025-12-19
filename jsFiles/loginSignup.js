@@ -80,10 +80,16 @@ if (loginBtn) {
     })
     .then(res => {
       showToast('Login Successful!');
+      localStorage.setItem("user", JSON.stringify(username));
       setTimeout(() => {
 
       }, 1500);
+      if(username.trim() === "Mehedihassan6838@gmail.com")
       window.location.href = '/client/adminDashboard/adminDashboard.php';
+
+      else{
+        window.location.href = '/client/userDashboard/userDashboard.php';
+      }
     })
     .catch(err => {
       console.error('Login error:', err);

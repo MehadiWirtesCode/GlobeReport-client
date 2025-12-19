@@ -1,0 +1,70 @@
+.modal-overlay {
+  display: none;
+}
+
+
+/* Logout button */
+.logout-btn {
+    margin: 50px;
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal box */
+.modal {
+    background: #fff;
+    padding: 25px;
+    width: 320px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Buttons */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.cancel {
+    background: #bdc3c7;
+    color: #333;
+}
+
+.logout {
+    background: #e74c3c;
+    color: #fff;
+}

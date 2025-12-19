@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../cssFiles/admin.css" />
+  <link rel="stylesheet" href="../cssFiles/logoutmodal.css">
   <script src="../jsFiles/admin.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
@@ -38,11 +39,11 @@
         <i class="fas fa-pen-nib"></i>
         <span>Create New Post</span>
       </a>
-      <a href="#" class="nav-link">
+      <a href="allPosts.php" class="nav-link">
         <i class="fas fa-list"></i>
         <span>All Posts</span>
       </a>
-      <a href="#" class="nav-link">
+      <a href="allUsers.php" class="nav-link">
         <i class="fas fa-users"></i>
         <span>Users</span>
       </a>
@@ -50,10 +51,10 @@
 
     <!-- Logout Link -->
     <div style="padding-top: 1.5rem; border-top: 1px solid var(--border-light); margin-top: 1.5rem;">
-      <a href="#" class="nav-link logout-link">
-        <i class="fas fa-sign-out-alt"></i>
+      <button href="#" class="nav-link logout-link" id="openLogoutModal">
+        <i class=" fas fa-sign-out-alt"></i>
         <span>Logout</span>
-      </a>
+      </button>
     </div>
   </aside>
 
@@ -99,6 +100,7 @@
             <option value="sports">Sports</option>
             <option value="business">Business</option>
             <option value="politics">Politics</option>
+            <option value="lifestyle">Lifestyle</option>
           </select>
         </div>
 
@@ -184,6 +186,46 @@
     </section>
 
   </div>
+
+
+  <!-- logout modal -->
+  <div class="modal-overlay" id="logoutModal">
+    <div class=" modal">
+      <h2>Confirm Logout</h2>
+      <p>Are you sure you want to logout?</p>
+
+      <div class="modal-actions">
+        <button class="btn cancel" id="closeLogoutModal">Cancel</button>
+        <button class="btn logout" id="flogout">Logout</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- logout modal handling -->
+  <script>
+  const openBtn = document.getElementById("openLogoutModal");
+  const modal = document.getElementById("logoutModal");
+  const closeBtn = document.getElementById("closeLogoutModal");
+  const flogout = document.getElementById("flogout");
+
+  openBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+  flogout.addEventListener("click", () => {
+    localStorage.removeItem("user");
+    window.location.href = "../index.php";
+  });
+  </script>
 
 </body>
 

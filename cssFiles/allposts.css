@@ -1,0 +1,96 @@
+.admin-container {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-header {
+    margin-bottom: 25px;
+}
+
+.admin-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.admin-header p {
+    color: #777;
+    font-size: 14px;
+}
+
+.table-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.post-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.post-list-table th {
+    background: #f8f9fa;
+    padding: 15px;
+    color: #555;
+    font-weight: 600;
+    border-bottom: 2px solid #eee;
+}
+
+.post-list-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #444;
+    vertical-align: middle;
+}
+
+.post-thumbnail {
+    width: 60px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.post-title-text {
+    font-weight: 500;
+    color: #2c3e50;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge-category {
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-delete {
+    background: #fff5f5;
+    color: #e53e3e;
+    border: 1px solid #feb2b2;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+    background: #e53e3e;
+    color: #fff;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px;
+    color: #999;
+}

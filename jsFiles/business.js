@@ -1,28 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-loadNews();
+    loadNews();
 });
 
 function loadNews() {
-let news = [];
+    let news = [];
 
-axios.get('http://localhost:8000/api/getInternationalNews.php')
-.then(res => {
-console.log(`All news loaded successfully`);
-news = res.data.news;
-console.log(news);
-const cardContainer = document.getElementById('international-card-container');
-cardContainer.innerHTML = "";
+    axios.get('http://localhost:8000/api/getBusinessNews.php')
+        .then(res => {
+            console.log(`All news loaded successfully`);
+            news = res.data.news;
+            console.log(news);
+            const cardContainer = document.getElementById('business-card-container');
+            cardContainer.innerHTML = "";
 
-news.forEach(item => {
+            news.forEach(item => {
 
-let categoryClass = '';
-switch (item.category?.toLowerCase()) {
-case "national": categoryClass = "bg-national"; break;
-case "international": categoryClass = "bg-international"; break;
-case "sports": categoryClass = "bg-sports"; break;
-case "business": categoryClass = "bg-business"; break;
-default: categoryClass = "bg-national";
-}
+                let categoryClass = '';
+                switch (item.category?.toLowerCase()) {
+                    case "national": categoryClass = "bg-national"; break;
+                    case "international": categoryClass = "bg-international"; break;
+                    case "sports": categoryClass = "bg-sports"; break;
+                    case "business": categoryClass = "bg-business"; break;
+                    default: categoryClass = "bg-national";
+                }
 
         cardContainer.innerHTML += `
             <div class="card">
@@ -60,11 +60,10 @@ default: categoryClass = "bg-national";
                 </div>
             </div>
         `;
-});
-})
-.catch(err => console.error(err));
+            });
+        })
+        .catch(err => console.error(err));
 }
-
 
 function addToWatchLater(newsId) {
 
