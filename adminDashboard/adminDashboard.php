@@ -65,8 +65,8 @@
     <header class="header-bar mb-8">
       <h1 class="header-title">Welcome, Admin!</h1>
       <div style="display: flex; align-items: center;">
-        <span style="color: var(--text-dark);">John Doe</span>
-        <div class="user-avatar">JD</div>
+        <span style="color: var(--text-dark);">Mehadi Hasan</span>
+        <div class="user-avatar">MH</div>
       </div>
     </header>
 
